@@ -1,3 +1,7 @@
+%Author:  Sayed hasnat  
+%         EEE, Khulna University of Engineering & Technology, khulna, Bangladesh.
+%        e-mail: sayedhasnat6[at]gmail[dot]com
+
 clear all;
 I= imread('closeeye1.jpg');
 subplot(3,1,1),imshow(I);
