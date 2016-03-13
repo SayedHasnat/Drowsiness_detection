@@ -1,17 +1,19 @@
+%Author:  Sayed hasnat  
+%         EEE, Khulna University of Engineering & Technology, khulna, Bangladesh.
+%        e-mail: sayedhasnat6[at]gmail[dot]com
+
 videoFReader = vision.VideoFileReader('video5.wmv');
 videoPlayer = vision.VideoPlayer;
 while ~isDone(videoFReader)
   videoFrame = step(videoFReader);
   step(videoPlayer, videoFrame);
-  %imshow(videoFrame)
   
-  %clear all;
+  
+ 
 I= videoFrame;
 subplot(3,1,1),imshow(I);
 
-%FaceDetect = vision.CascadeObjectDetector();
-%BBF=step(FaceDetect,I);
-%I=imcrop(I,BBF);
+
 
 EyeDetect = vision.CascadeObjectDetector('EyePairBig');
 BB=step(EyeDetect,I);
